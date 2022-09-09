@@ -9,7 +9,9 @@ class Solution:
         # change lower case to upper case
         result = filtered_str.lower()
 
-        # reverse a result str
-        result_reversed = result[::-1]
+        # reverse a result with list method
+        result_list = list(result)
+        result_list.reverse()
+        result_reversed = ''.join(result_list)
         
         return result == result_reversed
