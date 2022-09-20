@@ -9,9 +9,11 @@ class Solution:
         # remove special words
         paragraph = re.sub(r'[^\w\s]'," ", paragraph)
         
-        # remove banned words
+        # prevent exceptional case
         banned.sort()
         banned.reverse()
+        
+        # remove banned words
         for e in banned:
             paragraph = paragraph.replace(e, "")
 
