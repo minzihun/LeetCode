@@ -6,7 +6,7 @@
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         
-        q = []
+        q = collections.deque()
         
         if not head:
             return True
@@ -20,7 +20,7 @@ class Solution:
         
         # check if it's palindrome
         while len(q) > 1:
-            if q.pop(0) != q.pop():
+            if q.popleft() != q.pop():
                 return False
         
         return True
